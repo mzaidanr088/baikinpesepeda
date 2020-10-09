@@ -3,7 +3,14 @@ Sebuah project yang menjadi awal
 
 ## Anggota
   - [Hafid Ramadhan](https://github.com/dhanhafid/baikinpesepeda/tree/hafid)
-  - [Masfufahtul Umroh]()
+  - [Masfufahtul Umroh](https://github.com/MasfufahtulUmroh/baikinpesepeda/tree/umroh)
   - [M. Kholilur Rohman]()
-  - [M. Rijal Bagus Hernanda]()
-  - [M. Zaidan Rosyadi]()
+  - [M. Rijal Bagus Hernanda](https://github.com/RijalBgs/baikinpesepeda/tree/rijal)
+  - [M. Zaidan Rosyadi](https://github.com/mzaidanr088/baikinpesepeda/tree/zaidanr)
+  
+## Rancangan Fitur
+  - Akun
+  - Berita
+  - Map
+  - Mini Game
+  - Rambu
