@@ -2,7 +2,7 @@
 Sebuah project yang menjadi awal
 
 ## Anggota
-  - [Hafid Ramadhan]()
+  - [Hafid Ramadhan](https://github.com/dhanhafid/baikinpesepeda/tree/hafid)
   - [Masfufahtul Umroh]()
   - [M. Kholilur Rohman]()
   - [M. Rijal Bagus Hernanda]()
