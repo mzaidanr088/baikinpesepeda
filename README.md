@@ -10,7 +10,7 @@ Sebuah project yang menjadi awal
   
 ## Rancangan Fitur
   - Akun
-  - Berita
-  - Map
-  - Mini Game
+  - Peta
   - Rambu
+  - Mini Game
+  - Forum
