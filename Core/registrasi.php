@@ -1,7 +1,10 @@
 <?php
-class registration{
-	
+interface registration{
+	public function check();
+	public function registeredusername();
+}
 
+class verify Implements registration{
 	protected $inputName;
 	protected $inputusername;
 	protected $inputEmail;
@@ -42,6 +45,6 @@ class registration{
 		}
 	}
 }
-$registration = new registration ('umroh', 'umroh11', 'umroh@gmail.com', '1234');
-$registration->check();
+$date = new verify ('umroh', 'umroh11', 'umroh@gmail.com', '1234');
+$date->check();
 ?>
