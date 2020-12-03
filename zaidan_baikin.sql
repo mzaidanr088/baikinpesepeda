@@ -1,34 +1,34 @@
 -- drop database
-DROP DATABASE IF EXISTS'baikinpesepeda';
+DROP DATABASE IF EXISTS baikinpesepeda;
 
-CREATE DATABASE `baikinpesepeda`;
+CREATE DATABASE baikinpesepeda;
 
-Use 'baikinpesepeda';
+USE baikinpesepeda;
 
 
-DROP TABLE if exists 'admin';
+DROP TABLE IF EXISTS admin;
 
 CREATE TABLE 'admin'(
 	id_admin int (99) NOT NULL PRIMARY KEY AUTO_INCREMENT 
 	username varchar (90) NOT NULL,
 	password varchar (90) NOT NULL,
 	email varchar (90) NOT NULL,
-	) ENGINE=InnoDB DEFAULT CHARSET=utf 8mb4_general_ci;
+	) ENGINE=InnoDB DEFAULT CHARSET =utf8mb4 COLLATE= utf8mb4_general_ci;
 
 
-DROP TABLE if exists 'user';
+DROP TABLE IF EXIST user;
 
-CREATE TABLE 'user'(
+CREATE TABLE user(
     id_user int (99) NOT NULL PRIMARY KEY AUTO_INCREMENT, 
-	username varchar (90) NOT NULL,
-	password varchar (90) NOT NULL,
-	email varchar (90) NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=utf 8mb4_general_ci;
+    username varchar (90) NOT NULL,
+    password varchar (90) NOT NULL,
+    email varchar (90) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET =utf8mb4 COLLATE= utf8mb4_general_ci;
 
-DROP TABLE if exists 'poin';
+DROP TABLE IF EXIST poin;
 
-CREATE TABLE 'poin'(
+CREATE TABLE poin(
   id_user  int (99) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   poin tinyint (10) NOT NULL,
-FOREIGN KEY (id_user) references user (id_user) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf 8mb4_general_ci;
+FOREIGN KEY ('id_user') references 'user' ('id_user') ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET =utf8mb4 COLLATE= utf 8mb4_general_ci;
