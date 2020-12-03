@@ -1,5 +1,5 @@
 -- drop database
-DROP DATABASE IF EXISTS'baikinpesepeda_logout';
+DROP DATABASE IF EXISTS'baikinpesepeda';
 
 CREATE DATABASE `baikinpesepeda`;
 
