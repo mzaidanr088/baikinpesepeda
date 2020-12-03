@@ -31,4 +31,4 @@ CREATE TABLE poin(
   poin tinyint(10) NOT NULL PRIMARY KEY,
   id_user int(99) NOT NULL AUTO_INCREMENT
 FOREIGN KEY ('id_user') references 'user' ('id_user') ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET =utf8mb4 COLLATE= utf 8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET =utf8mb4 COLLATE= utf8mb4_general_ci;
