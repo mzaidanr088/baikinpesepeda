@@ -8,7 +8,7 @@ USE baikinpesepeda;
 
 DROP TABLE IF EXISTS admin;
 
-CREATE TABLE 'admin'(
+CREATE TABLE admin(
 	id_admin int (99) NOT NULL PRIMARY KEY AUTO_INCREMENT 
 	username varchar (90) NOT NULL,
 	password varchar (90) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE user(
 DROP TABLE IF EXIST poin;
 
 CREATE TABLE poin(
-  id_user  int (99) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  poin tinyint (10) NOT NULL,
+  poin tinyint(10) NOT NULL PRIMARY KEY,
+  id_user int(99) NOT NULL AUTO_INCREMENT
 FOREIGN KEY ('id_user') references 'user' ('id_user') ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET =utf8mb4 COLLATE= utf 8mb4_general_ci;
