@@ -8,5 +8,3 @@ private $DBNAME = "baikinpesepeda";
 private $PORT = 3306;
 
 }
-
-?>
