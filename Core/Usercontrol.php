@@ -1,43 +1,31 @@
 <?php
+require __DIR__ . "/ConfigurationDataBase.php";
+class mysql{
+    use ConfigurationDatabase;
 
-require __DIR__ . "/../Core/ControllerDB";
+    private $connection = null;
 
-class user extends ControllerDB {
+    public $status = fales;
+    public $erorMessage = null;
 
-	public function insert($user)
-	{
-		$stmt = $this->connection->prepare("INSERT INTO `user` (`email`, 'username', `password`) VALUES (?, ?, ?)");
-
-        $email = $user->getEmail();
-        $username = $user->getUsername();
-        $password = $user->getPassword();
-
-        $stmt->bind_param("ssii", $email, $username, $password );
-
-        $process = $stmt->execute();
-
-        if ($process) {
-            $stmt->close();
-            return true;
-        }
-
-        $stmt->close();
-        return false;
-
-	}
-}
-
-require _DIR_ . "/../Models/UserModel.php";
-	$user = new User();
-    $user->setEmail("baikinpesepeda@gmail.com");
-    $user->setUsername("baikpes111");
-    $user->setPassword("baik123");
-
-    $process = user::insert($user);
-
-    if ($process) {
-        print_r("Process successful.");
-    } else {
-        print_r("Process failure.\n");
+    public function __construct(){
+        $this->createConnection()
     }
-?>
+    private function createConnection(){
+        $this->connection = new mysqli($this->HOSTNAME, $this->USERNAME, $this->PASSWORD, $this->DBNAME, $this->PORT);
+        $this->checkConnection();
+    }
+    public function checkConnection(){
+        if($this->connection->connect_error){
+            $this->status = false;
+            $this->erorMessage = $this->connection->connect_error;
+        }else {
+            $this->status = true;
+        }
+    }
+    public function close(){
+        if ($this->connection){
+            $this->connection->close();
+        }
+    }
+}

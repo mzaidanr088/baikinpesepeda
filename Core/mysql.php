@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . "/ConfigurationDatabase.php";
+require __DIR__ . "/ConfigurationDataBase.php";
 class mysql{
 	use ConfigurationDatabase;
 
