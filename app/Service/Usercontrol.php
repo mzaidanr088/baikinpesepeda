@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . "/ConfigurationDataBase.php";
-class mysql{
+
+class Mysql{
     use ConfigurationDatabase;
 
     private $connection = null;
@@ -9,8 +10,9 @@ class mysql{
     public $erorMessage = null;
 
     public function __construct(){
-        $this->createConnection()
+        $this->createConnection();
     }
+
     private function createConnection(){
         $this->connection = new mysqli($this->HOSTNAME, $this->USERNAME, $this->PASSWORD, $this->DBNAME, $this->PORT);
         $this->checkConnection();
