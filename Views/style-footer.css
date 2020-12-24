@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+}
+
+.foot {
+    display: flex;
+    background-color: #1c1c1c;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-left: 75px;
+}
+
+.foot ul {
+    display: flex;
+    align-content: flex-end;
+    list-style: none;
+    padding-right: 75px;
+}
+
+.foot ul a {
+    padding: 8px;
+}
