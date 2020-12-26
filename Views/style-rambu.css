@@ -32,6 +32,26 @@ header {
     background-color: white;
     border-radius: 20px;
     margin-right: 100px;
+    height: fit-content;
+}
+
+.aside ul {
+    margin: 10px;
+    list-style: none;    
+}
+
+.aside ul li {
+    margin: 5px;
+}
+
+.aside ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.aside ul li a:hover {
+    color: #ffbd24;
+    text-decoration: none;
 }
 
 footer {
