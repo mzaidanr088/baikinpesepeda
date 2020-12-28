@@ -25,5 +25,12 @@
 }
 
 .foot ul a {
+    color: #ffbd24;
     padding: 8px;
+    font-size: x-large;
+}
+
+.foot ul a:hover {
+    color: white;
+    transition: 0.2s;
 }

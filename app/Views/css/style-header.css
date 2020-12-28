@@ -9,25 +9,59 @@ body {
     overflow-x: hidden;
 }
 
-nav {
-    display: flex;
+.nav {
+    display: grid;
+    grid-template-areas: 
+    'logo account'
+    'logo menu';
     background-color: #ffbd24;
     justify-content: space-around;
-    height: 80px;
+    height: 100px;
     align-items: center;
 }
 
-nav ul {
+.logo {
+    grid-area: logo;
+}
+
+.account {
+    margin-top: 10px;
+    grid-area: account;
+    display: flex;
+    list-style: none;
+    font-size: smaller;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    left: -5px;
+}
+
+.account a {
+    text-decoration: none;
+    color: #ffbd24;
+    background-color: #1c1c1c;
+    padding: 10px 15px;
+}
+
+.menu {
+    margin-top: -10px;
+    grid-area: menu;
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 40% ;
 }
 
-nav ul li a {
+.menu a {
+    text-decoration: none;
+    color: #1c1c1c;
+    padding: 0px 10px;
+}
+
+/* nav ul li a {
     color: #1c1c1c;
     text-decoration: none;
-}
+    padding: 0px 10px;
+} */
 
 nav ul li a:hover {
     transition: 0.2s;

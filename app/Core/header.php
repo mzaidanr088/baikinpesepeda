@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>baikinpesepeda</title>
-    <link rel="stylesheet" type="text/css" href="../views/css/style-header.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../views/css/style-header.css"> -->
+    <style>
+        <?php include '../views/css/style-header.css' ?>
+    </style>
 </head>
 <body>
-    <nav>
+    <nav class="nav">
         <div class="logo">
-            <h3><b>baikinpesepeda</b></h3>
+            <h2><b>baikinpesepeda</b></h2>
         </div>
 
-        <ul>
-            <li><a href="game.php"><b>PERMAINAN</b></a></li>
-            <li><a href=""><b>FORUM</b></a></li>
-            <li><a href="rambu.html"><b>RAMBU</b></a></li>
+        <ul class="account">
             <li><a href=""><b>MASUK</b></a></li>
             <li><a href=""><b>DAFTAR</b></a></li>
+        </ul>
+
+        <ul class="menu">
+            <li><a href=""><b>FORUM</b></a></li>
+            <li><a href="game.php"><b>PERMAINAN</b></a></li>
+            <li><a href=""><b>PETA</b></a></li>
+            <li><a href="rambu.php"><b>RAMBU</b></a></li>
+            
         </ul>
 
         <div class="menu-toggle">

@@ -4,11 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>baikinpesepeda</title>
-	<link rel="stylesheet" type="text/css" href="../Views/style-rambu.css">
-	<script src="../Views/script-include-html.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="../views/css/style-rambu.css"> -->
+	<style>
+		<?php include '../views/css/style-rambu.css' ?>
+	</style>
 </head>
 <body class="body">
-	<header w3-include-html="header.html"></header>
+	<header><?php include 'header.php' ?></header>
 
 	<main class="main">
 		<h2 style="text-align: center" >Rambu bagi pesepeda</h2>
@@ -102,10 +104,6 @@
 		</ul>
 	</aside>
 
-	<footer w3-include-html="footer.html"></footer>
-
-    <script>
-    includeHTML();
-    </script>
+	<footer><?php include 'footer.php' ?></footer>
 </body>
 </html>

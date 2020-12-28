@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>baikinpesepeda</title>
-    <link rel="stylesheet" type="text/css" href="../Views/css/style-game.css">
-    <script src="../Views/js/script-game.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="../views/css/style-game.css"> -->
+    <style>
+        <?php include '../views/css/style-game.css' ?>
+    </style>
+    <script src="../views/js/script-game.js"></script>
 </head>
 <body class="body">
-    <?php include 'header.php';?>
+    <header><?php include 'header.php';?></header>
 
     <main class="main">
 
@@ -39,15 +42,15 @@
                 <th style="width: 390px"></th>
             </tr>
             <tr>
-                <td><img src="../Views/img/game/inst-1.png"></td>
+                <td><img src="../views/img/game/inst-1.png"></td>
                 <td>klik play untuk memulai permainan,<br>tombol pedal akan muncul di sisi kanan</td>
             </tr>
             <tr>
-                <td><img src="../Views/img/game/inst-2.png"></td>
+                <td><img src="../views/img/game/inst-2.png"></td>
                 <td>klik tombol pedal secara bergantian<br>untuk mendapatkan poin</td>
             </tr>
             <tr>
-                <td><img src="../Views/img/game/inst-3.png"></td>
+                <td><img src="../views/img/game/inst-3.png"></td>
                 <td>dalam waktu 20 detik<br>kumpulkan poin sebanyak-banyaknya</td>
             </tr>
         </table>
@@ -88,6 +91,6 @@
         
     </aside>
 
-    <?php include 'footer.php';?>
+    <footer><?php include 'footer.php';?></footer>
 </body>
 </html>
