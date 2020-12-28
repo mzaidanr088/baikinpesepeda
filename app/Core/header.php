@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>baikinpesepeda</title>
-    <link rel="stylesheet" type="text/css" href="../Views/style-header.css">
+    <link rel="stylesheet" type="text/css" href="../views/css/style-header.css">
 </head>
 <body>
     <nav>
@@ -27,6 +27,6 @@
             <span></span>
         </div>
     </nav>
-    <script src="../Views/script-header.js"></script>
+    <script src="../views/js/script-header.js"></script>
 </body>
 </html>

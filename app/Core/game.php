@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>baikinpesepeda</title>
-    <link rel="stylesheet" type="text/css" href="../Views/style-game.css">
-    <script src="../Views/script-game.js"></script>
-    <script src="../Views/script-include-html.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Views/css/style-game.css">
+    <script src="../Views/js/script-game.js"></script>
 </head>
 <body class="body">
-    <header w3-include-html="header.html"></header>
+    <?php include 'header.php';?>
 
     <main class="main">
 
@@ -87,13 +86,8 @@
             
         </div>
         
-
     </aside>
 
-    <footer w3-include-html="footer.html"></footer>
-
-    <script>
-    includeHTML();
-    </script>
+    <?php include 'footer.php';?>
 </body>
 </html>

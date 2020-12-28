@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>baikinpesepeda</title>
-    <script src="../Views/script-include-html.js"></script>
 </head>
 <body>
-    <div w3-include-html="header.html"></div>
+    <?php
+        include '../app/core/header.php';
     
-    <div w3-include-html="footer.html"></div>
-    <script>
-    includeHTML();
-    </script>
+        include '../app/core/footer.php';
+    ?> 
 </body>
 </html>
