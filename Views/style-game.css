@@ -1,9 +1,0 @@
-.wadah {
-    border: 1px solid black;
-    position: absolute;
-    margin: 0 ;
-    width: 640px;
-    height: 480px;
-    background: url(img/sample.jpg);
-    background-repeat: repeat;
-}

@@ -1,0 +1,59 @@
+.body {
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'main aside'
+    'footer footer';
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 100px;
+}
+
+#rambu {
+    margin: auto;
+    border-spacing: 30px;
+    table-layout: fixed;
+}
+
+.aside {
+    grid-area: aside;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 100px;
+    height: fit-content;
+}
+
+.aside ul {
+    margin: 10px;
+    list-style: none;    
+}
+
+.aside ul li {
+    margin: 5px;
+}
+
+.aside ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.aside ul li a:hover {
+    color: #ffbd24;
+    text-decoration: none;
+}
+
+footer {
+    grid-area: footer;
+}

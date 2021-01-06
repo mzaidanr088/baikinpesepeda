@@ -1,0 +1,173 @@
+* {
+    margin: 0px;
+    padding: 0;
+    font-family: montserrat;
+}
+
+.body {
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'main aside'
+    'footer footer';
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 100px;
+}
+
+#container {
+    width: 640px;
+    height: 480px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+#view {
+    height: 380px;
+    width: 100%;
+    position: relative;
+    background-image: url(../views/img/game/bg-view.png);
+    background-repeat: repeat-x;
+    animation: view 5s linear infinite;
+    animation-play-state: paused;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes view {
+    0%{background-position: 1918px;}
+    100%{background-position: 0px;}
+}
+
+#game.play #view {
+    animation-play-state: running;
+}
+
+#char {
+    height: 150px;
+    width: 150px;
+    background-image: url(../views/img/game/char.png);
+    position: relative;
+    left: 50px;
+    top: 60px;
+    transition: 0.5s;
+}
+
+#view.move #char {
+    left: 80px;
+    transition: 0.5s;
+}
+
+.score-board {
+    background-color: #ee353b;
+    color: #f5f5f5;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    position: relative;
+    font-size: xx-large;
+    text-align: center;
+    line-height: 50px;
+    top: 155px;
+    left: 430px;
+}
+
+#control {
+    height: 100px;
+    width: 100%;
+    background-image: url(../views/img/game/bg-control.png);
+    display: flex;    
+    align-items: center;
+}
+
+#start {
+    height: 70px;
+    width: 145px;
+    background-image: url(../views/img/game/start.png);
+    cursor: pointer;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 15px;
+}
+
+#control.play #start {
+    display: none;
+}
+
+#control.play #button {
+    display: flex;
+}
+
+#button {
+    width: 145px;
+    height: 70px;
+    display: none;
+    position: relative;
+    left: 480px;
+    overflow: hidden;
+}
+
+#button.move #button1 {
+    top: 0px;
+}
+
+#button.move #button2 {
+    top: 70px;
+}
+
+#button1 {
+    height: 70px;
+    width: 70px;
+    background-image: url(../views/img/game/button1.png);
+    cursor: pointer;
+    position: relative;
+    top: 70px;
+}
+
+#button2 {
+    height: 70px;
+    width: 70px;
+    background-image: url(../views/img/game/button2.png);
+    cursor: pointer;
+    position: relative;
+    left: 5px;
+}
+
+#instruction {
+    margin: auto;
+    border-spacing: 15px;
+}
+
+
+.aside {
+    grid-area: aside;
+    padding: 20px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 100px;
+}
+
+#leaderboard {
+    margin: 20px auto;
+    height: 380px;
+    overflow-y: scroll;
+}
+
+footer {
+    grid-area: footer;
+}
