@@ -7,7 +7,7 @@ session_start();
  public function logout(){
  session_destroy();
  unset($_SESSION["user_id"]);
-echo "Logout berhasil dilakukan";
+echo "Logout Sucess";
    }
  }
 
