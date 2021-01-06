@@ -57,36 +57,43 @@
     </main>
 
     <aside class="aside">
-        <h2 style="text-align: center;"><b>Peringkat</b></h2>
-
-        <?php
-            $db_host = 'localhost';
-            $db_user = 'root';
-            $db_pass = '';
-            $db_name = 'baikinpesepeda';
-
-            $conn = mysqli_connect($db_host,$db_user,$db_pass,$db_name);
-            if (!$conn) {
-                die ('failed to connect: ' . mysqli_connect_error());
-            }
-
-            $sql = 'SELECT username, point FROM leaderboard';
-
-            $query = mysqli_query($conn, $sql);
-            if(!$query) {
-                die ('SQL Error: ' . mysqli_error(($conn)));
-            }
-
-            while ($row = mysqli_fetch_array($query)) {
-                echo  $row["username"] . $row["point"];
-            }
-
-            mysqli_free_result($query);
-            mysqli_close($conn);
-        ?>
+        <h2 style="text-align: center;"><b>Peringkat</b></h2>    
         
         <div id ="leaderboard">
-            
+            <table>
+                <tr>
+                    <th style="width: 200px"></th>
+                    <th style="width: 50px"></th>
+                </tr>
+                
+                <?php
+                    $db_host = 'localhost';
+                    $db_user = 'root';
+                    $db_pass = '';
+                    $db_name = 'baikinpesepeda';
+                
+                    $conn = mysqli_connect($db_host,$db_user,$db_pass,$db_name);
+                        if (!$conn) {
+                            die ('failed to connect: ' . mysqli_connect_error());
+                        }
+
+                    $sql = 'SELECT username, point FROM leaderboard ORDER BY point DESC';
+
+                    $query = mysqli_query($conn, $sql);
+                    if(!$query) {
+                        die ('SQL Error: ' . mysqli_error(($conn)));
+                    }
+
+                    while ($row = mysqli_fetch_array($query)) {
+                        echo '<tr><td><b>' . $row["username"] . '</b></td>' . 
+                        '<td  style="text-align: center">' . $row["point"] . '</td></tr>';
+                    }
+
+                    mysqli_free_result($query);
+                    mysqli_close($conn);
+                ?>
+                
+            </table>
         </div>
         
     </aside>
