@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background-color: #f5f5f5;
+    font-family: montserrat;
+    overflow-x: hidden;
+}
+
+.nav {
+    display: grid;
+    grid-template-areas: 
+    'logo account'
+    'logo menu';
+    background-color: #ffbd24;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.account {
+    margin-top: 10px;
+    grid-area: account;
+    display: flex;
+    list-style: none;
+    font-size: smaller;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    left: -5px;
+}
+
+.account a {
+    text-decoration: none;
+    color: #ffbd24;
+    background-color: #1c1c1c;
+    padding: 10px 15px;
+}
+
+.menu {
+    margin-top: -10px;
+    grid-area: menu;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #1c1c1c;
+    padding: 0px 10px;
+}
+
+/* nav ul li a {
+    color: #1c1c1c;
+    text-decoration: none;
+    padding: 0px 10px;
+} */
+
+nav ul li a:hover {
+    transition: 0.2s;
+    color: #f5f5f5;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    left: -11px;
+    top: -2px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle span {
+    display: block;    
+    width: 28px;
+    height: 3px;
+    background-color: #1c1c1c;
+}
+
+/* burger menu */
+.menu-toggle input:checked ~ span{
+    background-color: #f5f5f5;
+}
+
+/* Responsive */
+/* Ukuran tablet */
+@media screen and (max-width: 900px){
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* ukuran smartphone */
+@media screen and (max-width: 700px){
+    .menu-toggle {
+        display: flex;
+    }
+    
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1c1c1c;
+        transform: translateX(100%);
+        transition: 0.2s;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+    }
+
+    nav ul li a {
+        color: #ffbd24;
+        text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+        transition: 0.2s;
+        color: #f5f5f5;
+    }
+}
