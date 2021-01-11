@@ -17,7 +17,7 @@ class RegisterController extends Query{
 	}
 	public function validateData(){
 		if(empty($this->username) || empty($this->name) || empty($this->password) || empty($this->email)){
-			$this->message = 'Semua data dibutuhkan!.';
+			$this->message = 'Semua data dibutuhkan!';
 			return $this->message;
 			header('location:register.php');
 		} else{

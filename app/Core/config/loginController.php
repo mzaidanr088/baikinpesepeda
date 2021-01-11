@@ -19,7 +19,7 @@ class LoginController extends Query{
 
 	public function validateData(){
 		if(empty($this->username)|| empty($this->password)){
-			$this->message = "Username dan Password belum diisi";
+			$this->message = "username dan password belum diisi";
 			return $this->message;
 	 		header('location:login.php');
 		}else{
@@ -47,7 +47,7 @@ class LoginController extends Query{
             header('location:game.php');
 			
 		}else{
-			$this->message = "Username atau Password Anda salah";
+			$this->message = "username atau password anda salah";
 			return $this->message;
 			header('location:login.php');
 		}

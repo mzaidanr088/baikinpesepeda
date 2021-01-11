@@ -12,42 +12,45 @@ if(isset($_POST['submit'])){
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>baikinpesepeda</title>
+	<link rel="stylesheet" href="style-login.css">
 </head>
 <body class="bg-primary">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-4">	
+	<div class="container">	
+		
+		<p><b>Daftar</b></p>
+
+		<form method="post" action="register.php">
 			<?php 
 				if(isset($_POST['submit'])){
-					echo "<div class='alert alert-danger text-center' role='alert'>
-					'".$register->message."'
+					echo "<div class='alert' style='color: red; margin-bottom: 5px;' role='alert'>
+					'<b>".$register->message."</b>'
 					</div>";
 				}
 			?>
-				<h1 class="text-center text-light">Register Here!</h1>
-				<form method="post" action="register.php">
-					<div class="form-group">
-						<input type="email" name="email" placeholder="Email" class="form-control">
-					</div>
-
-					<div class="form-group">
-						<input type="text" name="username" placeholder="Username" class="form-control">
-					</div>
-
-					<div class="form-group">
-						<input type="text" name="name" placeholder="Name" class="form-control">
-					</div>
-
-					<div class="form-group">
-						<input type="password" name="password" placeholder="Password" class="form-control">
-					</div>
-					<input type="submit" name="submit" value="Register" class="btn btn-outline-light btn-block">
-				</form>
-				<div class="text-center">
-					<a href="login.php" class="text-light">Anda sudah menpunyai akun?</a>
-				</div>
+		
+			<div class="form-group">
+				<input type="email" name="email" placeholder="Email" class="form-control">
 			</div>
-		</div>
+
+			<div class="form-group">
+				<input type="text" name="username" placeholder="Username" class="form-control">
+			</div>
+
+			<div class="form-group">
+				<input type="text" name="name" placeholder="Name" class="form-control">
+			</div>
+
+			<div class="form-group">
+				<input type="password" name="password" placeholder="Password" class="form-control">
+			</div>
+
+			<input type="submit" name="submit" value="Register" class="btn btn-outline-light btn-block">
+			
+			<div class="reg">
+				<b>Sudah punya akun? <a href="login.php">Login</a></b>
+			</div>
+		</form>
+
 	</div>
 </body>
 </html>
