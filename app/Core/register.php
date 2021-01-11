@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>baikinpesepeda</title>
-	<link rel="stylesheet" href="style-login.css">
+	<link rel="stylesheet" href="../views/css/style-login.css">
 </head>
 <body class="bg-primary">
 	<div class="container">	
