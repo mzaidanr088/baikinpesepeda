@@ -16,8 +16,8 @@
         </div>
 
         <ul class="account">
-            <li><a href=""><b>MASUK</b></a></li>
-            <li><a href=""><b>DAFTAR</b></a></li>
+            <li><a href="login.php"><b>LOGIN</b></a></li>
+            <li><a href="register.php"><b>DAFTAR</b></a></li>
         </ul>
 
         <ul class="menu">
