@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +14,15 @@
 	</style>
 </head>
 <body class="body">
-	<header><?php include 'header.php' ?></header>
+	<header>
+		<?php
+			if( !isset($_SESSION['login']) ) {
+				include 'header-guest.php';
+			} else {
+				include 'header-login.php';
+			}
+		?>
+    </header>
 
 	<main class="main">
 		<h2 style="text-align: center" >Rambu bagi pesepeda</h2>

@@ -1,0 +1,42 @@
+.body {
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'main aside'
+    'footer footer';
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 100px;
+}
+
+#googleMap {
+    margin: 20px auto;
+}
+
+.aside {
+    grid-area: aside;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 100px;
+    height: fit-content;
+}
+
+.aside p {
+    padding: 15px;
+}
+
+.footer {
+    grid-area: footer;
+}

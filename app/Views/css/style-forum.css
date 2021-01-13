@@ -1,0 +1,89 @@
+.body {
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'main aside'
+    'footer footer';
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 100px;
+}
+
+.post {
+    width: 640px;
+    height: fit-content;
+    margin: 20px auto;
+    padding-bottom: 15px;
+    border-bottom: 2px solid silver;
+}
+
+.post:hover {
+    border-bottom: 2px solid #ffbd24;
+}
+
+.post p a {
+    text-decoration: none;
+    color: #ffbd24;
+    transition: 0.2s;
+}
+
+.post p a:hover {
+    text-decoration: underline;
+    color: black;
+    transition: 0.2s;
+}
+
+.post a{
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+
+.post a:hover {
+    text-decoration: underline;
+    color: #ffbd24;
+    transition: 0.2s;
+}
+
+.aside {
+    grid-area: aside;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 100px;
+    height: fit-content;
+}
+
+.aside ul {
+    margin: 10px;
+    list-style: none;    
+}
+
+.aside ul li {
+    margin: 5px;
+}
+
+.aside ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.aside ul li a:hover {
+    color: #ffbd24;
+    text-decoration: none;
+}
+
+footer {
+    grid-area: footer;
+}

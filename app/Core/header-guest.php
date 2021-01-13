@@ -16,14 +16,14 @@
         </div>
 
         <ul class="account">
-            <li><a href=""><b>MASUK</b></a></li>
-            <li><a href=""><b>DAFTAR</b></a></li>
+            <li><a href="login.php"><b>LOGIN</b></a></li>
+            <li><a href="register.php"><b>DAFTAR</b></a></li>
         </ul>
 
         <ul class="menu">
-            <li><a href=""><b>FORUM</b></a></li>
+            <li><a href="forum.php"><b>FORUM</b></a></li>
             <li><a href="game.php"><b>PERMAINAN</b></a></li>
-            <li><a href=""><b>PETA</b></a></li>
+            <li><a href="maps.php"><b>PETA</b></a></li>
             <li><a href="rambu.php"><b>RAMBU</b></a></li>
             
         </ul>
