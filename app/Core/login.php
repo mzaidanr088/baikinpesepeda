@@ -3,12 +3,7 @@ require 'config\loginController.php';
 session_start();
 if(isset($_POST['submit'])){
 	$login = new LoginController;
-	if(!empty($_POST['remember'])){
-		$remember = $_POST['remember'];
-	}else{
-		$remember = NULL;
-	}
-	$login->getData($_POST['username'], $_POST['password'], $remember);
+	$login->getData($_POST['username'], $_POST['password']);
 }
 ?>
 <!DOCTYPE html>
@@ -35,19 +30,11 @@ if(isset($_POST['submit'])){
 			?>
 
 			<div class="form-group">
-				<input type="text" name="username" placeholder="Username" class="form-control" value="<?php
-					if(isset($_COOKIE['username'])){echo $_COOKIE['username']; } ?>">
+				<input type="text" name="username" placeholder="Username" class="form-control">
 			</div>
 
 			<div class="form-group">
-				<input type="password" name="password" placeholder="Password" class="form-control" value="<?php
-					if(isset($_COOKIE['password'])){echo $_COOKIE['password']; } ?>">
-			</div>
-
-			<div class="form-check">
-				<input type="checkbox" name="remember" class="form-check-input" id="remember1" <?php 
-					if(isset($_COOKIE['email'])){ ?>checked <?php } ?>>
-				<label class="form-check-label" for="remember1">Remember Me</label>
+				<input type="password" name="password" placeholder="Password" class="form-control">
 			</div>
 
 			<input class="btn" type="submit" name="submit" value="Login"><br>

@@ -1,7 +1,7 @@
 <?php 
-require 'query.php';
+require __DIR__ . '\..\..\service\userService.php';
 
-class RegisterController extends Query{
+class RegisterController extends UserService{
 	protected $username;
 	protected $name;
 	protected $password;
@@ -35,7 +35,7 @@ class RegisterController extends Query{
 			$sql = $this->SQLRegister( $this->username, $this->name, $this->password, $this->email);
 			$_SESSION['username'] = $row['username'];
 			$_SESSION['password'] = $row['password'];
-			header('location:game.php');
+			header('location:login.php');
 		}
 
 	}

@@ -67,7 +67,7 @@
     <aside class="aside">
         <h2 style="text-align: center;">Rute</h2>
 
-        <p>kamu bisa merencanakan <br> rute bersepeda yang akan kamu lalui sesukamu</b></p>
+        <p>kamu bisa memilih rute <br> yang disarankan ataupun merencanakan rute bersepeda yang akan kamu lalui sesukamu</b></p>
     </aside>
 
     <footer class="footer">

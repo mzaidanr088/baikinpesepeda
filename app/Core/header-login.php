@@ -21,7 +21,7 @@
         </ul>
 
         <ul class="menu">
-            <li><a href=""><b>FORUM</b></a></li>
+            <li><a href="forum.php"><b>FORUM</b></a></li>
             <li><a href="game.php"><b>PERMAINAN</b></a></li>
             <li><a href="maps.php"><b>PETA</b></a></li>
             <li><a href="rambu.php"><b>RAMBU</b></a></li>

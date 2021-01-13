@@ -10,7 +10,7 @@ let point;
 function playGame() {
     this.game.classList.add('play');
     this.control.classList.add('play');
-
+    
     this.point = 0;
     document.querySelector('.score-board').innerHTML = '<b>' + this.point + '</b>';
 

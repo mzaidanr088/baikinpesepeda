@@ -1,18 +1,16 @@
 <?php 
 
-require 'query.php';
+require __DIR__ . '\..\..\service\userService.php';
 
-class LoginController extends Query{
+class LoginController extends UserService{
 	protected $username;
 	protected $password;
-	public $remember;
     public $message;
     public $login;
 
-	public function getData($username, $password, $remember){
+	public function getData($username, $password){
 		$this->username = $username;
 		$this->password = $password;
-        $this->remember = $remember;
 
 		return $this->validateData();
 	}
@@ -30,21 +28,19 @@ class LoginController extends Query{
 	public function Login(){
 		$row = $this->SQLLogin($this->username, $this->password)->FetchArray();
 		if($row['username'] == $this->username || $row['password'] == md5($this->password)){
-            $_SESSION['login'] = true;
+				
+			if($row['role'] == 'admin')	 {
+				$_SESSION['admin'] = true;
+			} else {
+				$_SESSION['admin'] = false;
+			}
+			
+			$_SESSION['login'] = true;
             
             $_SESSION['username'] = $row['username'];
             $_SESSION['password'] = $row['password'];
-
-			$time = time() + (86400 *30);
-			if(!empty($this->remember)){
-				setcookie('username', $this->username, $time);
-				setcookie('password', $this->password, $time);
-			}else{
-				setcookie('username','');
-				setcookie('password','');
-            }
-            
-            header('location:game.php');
+			
+            header('location:forum.php');
 			
 		}else{
 			$this->message = "username atau password anda salah";

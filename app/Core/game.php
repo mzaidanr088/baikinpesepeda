@@ -1,5 +1,16 @@
 <?php
     session_start();
+
+    $db_host = 'localhost';
+    $db_user = 'root';
+    $db_pass = '';
+    $db_name = 'baikinpesepeda';
+
+    $conn = mysqli_connect($db_host,$db_user,$db_pass,$db_name);
+    
+    if (!$conn) {
+        die ('failed to connect: ' . mysqli_connect_error());
+    }
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +50,7 @@
 
             <div id="control">
                 <div id="start" onclick="playGame()"></div>
+
                 <div id="button">
                     <div id="button1" onclick="pedalLeft()"></div>
                     <div id="button2" onclick="pedalRight()"></div>
@@ -79,16 +91,6 @@
                 </tr>
                 
                 <?php
-                    $db_host = 'localhost';
-                    $db_user = 'root';
-                    $db_pass = '';
-                    $db_name = 'baikinpesepeda';
-                
-                    $conn = mysqli_connect($db_host,$db_user,$db_pass,$db_name);
-                        if (!$conn) {
-                            die ('failed to connect: ' . mysqli_connect_error());
-                        }
-
                     $sql = 'SELECT username, point FROM leaderboard ORDER BY point DESC';
 
                     $query = mysqli_query($conn, $sql);

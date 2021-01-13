@@ -37,6 +37,6 @@ header {
     padding: 15px;
 }
 
-footer {
+.footer {
     grid-area: footer;
 }
