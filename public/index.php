@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>baikinpesepeda</title>
+    <link rel="stylesheet" href="/app/views/css/style-forum.css">
 </head>
 <body>
-    <?php
-        include '../app/core/header.php';
-    
-        include '../app/core/footer.php';
-    ?> 
+    <meta http-equiv='refresh' content='1;url=../app/core/forum.php'>
 </body>
 </html>
